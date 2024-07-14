@@ -1,0 +1,39 @@
+# Auto detect text files and perform LF normalization
+* text=auto
+import java.util.Scanner;
+import java.util.Random;
+
+public class java_guesstask{
+
+    public static void main(String[]args){
+        int number;
+        //taking input from user
+        Scanner sc=new Scanner(System.in);
+        //generating random number
+        Random  random_numb=new Random();
+        number=random_numb.nextInt(101);
+        boolean usercorrect=false;
+
+
+        while(!usercorrect){
+            System.out.println("Guess the number within the specified range");
+
+            int guess=sc.nextInt();
+            if(guess<number){
+                System.out.println("too low,Please try again");
+            }
+            else if(guess>number){
+                System.out.println("too high, Better luck next time");
+            }
+            else if(guess==number){
+                System.out.println("yes correct,congratulations");
+            }
+            else{
+                System.out.println("Invalid Search");
+
+                usercorrect=true;
+            }
+        }
+
+    }
+}
